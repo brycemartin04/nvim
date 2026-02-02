@@ -19,8 +19,7 @@ return {
         config = function()
           local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-          local lspconfig = require("lspconfig")
-          lspconfig.clangd.setup({
+          vim.lsp.enable('clangd', {
                 capabilities = capabilities
             })
           vim.keymap.set("n", "K", vim.lsp.buf.hover, {})

@@ -10,6 +10,7 @@ vim.opt.nu = true
 vim.wo.relativenumber = true
 vim.o.statuscolumn = "%s %l %r"
 
+vim.opt.splitright = true;
 vim.opt.list = true
 vim.opt.listchars = {
   tab = "░ ",
