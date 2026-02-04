@@ -9,5 +9,6 @@ return
   local map = vim.keymap.set
   map('n', '<Tab>', '<Cmd>BufferLineCycleNext<CR>', { desc = 'Next Buffer' })
   map('n', '<S-Tab>', '<Cmd>BufferLineCyclePrev<CR>', { desc = 'Prev Buffer' })
+  map('n', '<leader>q', ':bdelete<CR>', { desc = 'Close current buffer' })
   end
 }
