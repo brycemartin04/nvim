@@ -1,32 +1,32 @@
 return {
-      {
+    {
         "williamboman/mason.nvim",
         lazy = false,
         config = function()
-          require("mason").setup()
+            require("mason").setup()
         end,
-      },
-      {
+    },
+    {
         "williamboman/mason-lspconfig.nvim",
         lazy = false,
         opts = {
-          auto_install = true,
+            auto_install = true,
         },
-      },
-      {
-            "neovim/nvim-lspconfig",
+    },
+    {
+        "neovim/nvim-lspconfig",
         lazy = false,
         config = function()
-          local capabilities = require('cmp_nvim_lsp').default_capabilities()
+            local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-          vim.lsp.enable('clangd', {
+            vim.lsp.enable('clangd', {
                 capabilities = capabilities
             })
-          vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-          vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
-          vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
-          vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
-          vim.keymap.set("n", "<leader>e",  vim.diagnostic.open_float, {})
+            vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
+            vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
+            vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
+            vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
+            vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, {})
         end,
-      },
+    },
 }
