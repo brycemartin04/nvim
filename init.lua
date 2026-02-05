@@ -20,9 +20,13 @@ vim.opt.listchars = {
   nbsp = "⣿",
 }
 
-vim.keymap.set({'n', 'v'}, '<leader>y', [["+y]], { desc = 'Yank to system clipboard' })
-vim.keymap.set({'n', 'v'}, '<leader>p', [["+p]], { desc = 'Clipboard: [P]aste from system' })
-vim.keymap.set('n', '<leader>yy', [["+yy]], { desc = 'Yank line to system clipboard' })
+-- Yank into system clipboard
+vim.keymap.set({'n', 'v'}, '<leader>y', '"+y', { desc = 'Yank to system clipboard' })
+vim.keymap.set('n', '<leader>yy', '"+yy', { desc = 'Yank line to system clipboard' })
+
+-- Paste from system clipboard
+vim.keymap.set({'n', 'v'}, '<leader>p', '"+p', { desc = 'Paste from system clipboard' })
+vim.keymap.set({'n', 'v'}, '<leader>P', '"+P', { desc = 'Paste from system clipboard (before)' })
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
