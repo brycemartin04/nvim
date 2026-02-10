@@ -31,9 +31,9 @@ return {
             vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
             vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, {})
             -- Vertical split
-            vim.keymap.set('n', '<leader>gdv', function() vim.cmd('vsplit') vim.lsp.buf.definition() end)
+            vim.keymap.set('n', '<leader>gv', function() vim.cmd('vsplit') vim.lsp.buf.definition() end)
             vim.keymap.set('n', '<leader>grv', function() vim.cmd('vsplit') vim.lsp.buf.references() end)
-            vim.keymap.set('n', '<leader>gdh', function() vim.cmd('split') vim.lsp.buf.definition() end)
+            vim.keymap.set('n', '<leader>gh', function() vim.cmd('split') vim.lsp.buf.definition() end)
             vim.keymap.set('n', '<leader>grh', function() vim.cmd('split') vim.lsp.buf.references() end)
 
         end,

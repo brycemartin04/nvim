@@ -28,8 +28,8 @@ vim.keymap.set('n', '<leader>yy', '"+yy', { desc = 'Yank line to system clipboar
 vim.keymap.set({'n', 'v'}, '<leader>p', '"+p', { desc = 'Paste from system clipboard' })
 vim.keymap.set({'n', 'v'}, '<leader>P', '"+P', { desc = 'Paste from system clipboard (before)' })
 
-vim.keymap.set("n", "<C-d>","<C-d>zz")
-vim.keymap.set("n", "<C-u>","<C-u>zz")
+vim.keymap.set("n", "<C-d>","<C-d>_zz")
+vim.keymap.set("n", "<C-u>","<C-u>_zz")
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
